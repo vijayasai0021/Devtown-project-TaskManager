@@ -221,6 +221,8 @@ const deleteTask = (e) => {
   // console.log(type);
   const removeTask = state.taskList.filter(({ id }) => id !== targetId);
   // console.log(removeTask);
+
+  
   updateLocalStorage();
 
   if (type === "BUTTON") {
