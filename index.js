@@ -222,19 +222,23 @@ const deleteTask = (e) => {
   const removeTask = state.taskList.filter(({ id }) => id !== targetId);
   // console.log(removeTask);
 
-  
+  state.taskList=removeTask;
+
   updateLocalStorage();
 
   if (type === "BUTTON") {
     // console.log(e.target.parentNode.parentNode.parentNode.parentNode);
     return e.target.parentNode.parentNode.parentNode.parentNode.removeChild(
-      e.target.parentNode.parentNode.parentNode
+      e.target.parentNode.parentNode.parentNode.parentNode
     );
   } else if (type === "I") {
     return e.target.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(
       e.target.parentNode.parentNode.parentNode.parentNode
     );
   }
+
+  
+  
 };
 
 // edit task
