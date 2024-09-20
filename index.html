@@ -24,8 +24,8 @@
           <h1 class="modal-title fs-5" id="addNewModalLabel">Create a New Task</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <form onsubmit="return false">
+        <div  class="modal-body">
+          <form id='myForm' onsubmit="return false">
             <!-- img -->
             <div class="mb-3">
               <label for="imageUrl" class="form-label">Image URL</label>
@@ -45,13 +45,13 @@
             <!-- Task Type -->
             <div class="mb-3">
               <label for="tags" class="form-label">Task Type</label>
-              <input type="text" class="form-control" id="tags" placeholder="Mention Your Task Type" required />
+              <input  type="text" class="form-control" id="tags" placeholder="Mention Your Task Type" required />
             </div>
 
             <!-- Task Description -->
             <div class="mb-3">
               <label for="taskDescription" class="form-label">Task Description</label>
-              <textarea type="text" class="form-control" id="taskDescription" placeholder="Task Description..." required
+              <textarea  type="text" class="form-control" id="taskDescription" placeholder="Task Description..." required
                 rows="3"></textarea>
             </div>
           </form>
@@ -60,7 +60,7 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
-          <button type="submit" class="btn btn-primary" onclick="handleSubmit()">
+          <button type="submit" class="btn btn-primary" onclick="handleSubmit();myFunction();myModal.close()">
             Save changes
           </button>
         </div>

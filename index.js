@@ -343,3 +343,16 @@ const searchTask = (e) => {
     // taskContents.insertAdjacentHTML("beforeend", htmlModalContent(cardData))
   );
 }
+
+// to reset the input fields
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+
+
+// function to close the modal after clicking the submit button
+// function deleteModalFunction(){
+//   document.getElementById('addNewModal').style.display='none';
+// }
+
+const myModal = new bootstrap.Modal('#addNewModal');
